@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - "10"
+sudo: false
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+    - node_modules
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep-history: true
+  api-key:
+    secure: LtoslAmnV8qin8pbhHotmgvs5ddLsc3bY49WZ23hcUrTEXP0MjBeMdCqEoJZTYgs5I2xSI/DW1g8pxeCRw07hYPDB8wzE6QElPzZfORGfrREZe9qmJ0qRbaP7g2IJyZEet5h1URYWF8IuSpyqY6tx/w+s97kHq8P3sh/qJH6DjyUAKfvFbQBXGVU5KHImU8GqRrF2okN1lcV6ZcG5613gu8e6kG1zNvnalqM6ObSOiFeDBdzJ7wBG/Oztqruvn/YVyUuP7AHyIjNA7tBNbPv2xFiBOmKkTErR59uUtJCtTDcljNaV7vLFcU6jfwSq00Ez1kRCFY3wldcSpXSYWzDxqqomytQdCMLTnsSnFFFLONmT1kHUwrC65P7N6GH5Wpmi3+31UXhHR5fzgqCdgbU28zT6abrNhdi/0RLQrZcnEkLBrwml4fMF0zPoRQFa/x8RKvYVyKL9hWYxaioG4+kLS2RyKhoafo4PXRSV8UqIdDeN5eB96ucQH0zElTV7UIWiinzisl73gjdhlRWfn4ZoDLtm/y1EBbkRSPOamnelnCh1YT7rqFAXkP6uRZR16izO3ir1y6NHbiuUmZNGY5ocyc7wt0sq2bz1vYm6Yy1PazuvafwLkr3CyL7zZHUBwl/Uc2Lk+FVbAyY3zFInr6D72eWlTyhBhZOCfQ0PJgegkI=
+  app: anish-recipes
